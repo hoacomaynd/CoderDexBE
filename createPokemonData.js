@@ -20,7 +20,7 @@ const createPokemonData = async () => {
   newData = newData.map((pokemon, index) => {
     return {
       id: index + 1,
-      url: `/images/${pokemon.name}.png`,
+      url: `/images/${pokemon.name.toLowerCase()}.png`,
       name: pokemon.name,
       description:
         faker.person.bio()[0].toUpperCase() + faker.person.bio().slice(1),
